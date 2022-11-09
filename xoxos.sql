@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 11:50 AM
+-- Generation Time: Nov 09, 2022 at 09:56 PM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,6 +35,16 @@ CREATE TABLE `admin` (
   `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `username`, `password`, `email`) VALUES
+(1, 'Harsh Sharma', 'XoXoHarsh', 'harsh1234', 'harshsharma20503@gmail.com'),
+(2, 'Neha Mittal', 'XoXoNeha', 'neha1234', 'neha@gmail.com'),
+(3, 'Shaily Sharma', 'XoXoShaily', 'shaily1234', 'shaily@gmail.com'),
+(4, 'Harshit Singh', 'XoXoHarshit', 'harshit1234', 'harshit@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +58,14 @@ CREATE TABLE `category` (
   `status` int(11) NOT NULL,
   `added_on` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `category`, `order_number`, `status`, `added_on`) VALUES
+(1, 'test1', 1, 1, '2022-11-09 21:46:50'),
+(2, 'test2', 2, 2, '2022-11-09 21:46:50');
 
 -- --------------------------------------------------------
 
@@ -242,10 +260,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `coupon_code`
